@@ -6,7 +6,7 @@
 
 An OpenClaw skill: takes a quotation form JSON, calls the backend [quanlaidian-quote-service](https://github.com/jasonshao/quanlaidian-quote-service), and returns a quotation summary with download links for PDF / Excel / JSON config files.
 
-**Version:** 1.1.1　**Dependencies:** Python 3 standard library only
+**Version:** 1.2.0　**Dependencies:** Python 3 standard library only
 
 ---
 
