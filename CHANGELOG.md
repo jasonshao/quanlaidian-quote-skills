@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1 (2026-04-22)
+
+- 门店数量范围 1–30 → **1–300**；31–300 段服务端自动走锚点 + 阶梯对比报价，301+ 转人工
+- 对外渲染去掉"标价"和"折扣率"两列，只展示最终成交价；客户报价单不暴露底价
+- SKILL.md 新增硬约束：**禁止任何形式的折扣率外推、推演、估算**，所有价格只从 API 响应透传
+- SKILL.md 新增"大客户段（31–300 店）处理规则"和"多档主动对比"两节，覆盖 50/100/200 等锚点多次调用场景
+- `scripts/quote.py` 读到 `pricing_info.algorithm_version=large-segment-v1` 时追加两档提示；老响应兼容（防御式跳过）
+
 ## 1.1.0 (2026-04-22)
 
 - 新增节点每日自动更新机制：`scripts/check_openclaw_update.py` 比对本地 `VERSION` 与 `main` 分支 raw `VERSION`，有新版本时 `git pull --ff-only`

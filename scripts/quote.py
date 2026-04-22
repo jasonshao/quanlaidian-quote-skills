@@ -27,8 +27,14 @@ def render(result):
     print("## 本次配置摘要\n")
     print(f"- 品牌：{p['brand']}")
     print(f"- 餐饮类型：{p['meal_type']}    门店数：{p['stores']}")
-    print(f"- 套餐：{p['package']}    折扣：{p['discount']}")
-    print(f"- 总价：¥{p['totals']['final']:,}（标价 ¥{p['totals']['list']:,}）\n")
+    print(f"- 套餐：{p['package']}")
+    print(f"- 总价：¥{p['totals']['final']:,}\n")
+    info = result.get("pricing_info") or {}
+    requested = info.get("original_requested_store_count")
+    effective = info.get("effective_store_count")
+    if requested and effective and requested != effective:
+        print(f"> 输入 {requested} 店落在大客户段，主报价按 {effective} 店方案生成；")
+        print(f"> PDF/Excel 附相邻两档阶梯对比页，供客户做规模决策参考。\n")
     print("## 下载文件\n")
     print(f"- [报价单 PDF]({f['pdf']['url']})")
     print(f"- [报价单 Excel]({f['xlsx']['url']})")

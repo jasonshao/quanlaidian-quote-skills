@@ -6,7 +6,7 @@
 
 An OpenClaw skill: takes a quotation form JSON, calls the backend [quanlaidian-quote-service](https://github.com/jasonshao/quanlaidian-quote-service), and returns a quotation summary with download links for PDF / Excel / JSON config files.
 
-**Version:** 1.1.0　**Dependencies:** Python 3 standard library only
+**Version:** 1.1.1　**Dependencies:** Python 3 standard library only
 
 ---
 
@@ -73,8 +73,8 @@ The script writes Markdown directly to stdout:
 
 - 品牌：示例品牌
 - 餐饮类型：正餐    门店数：10
-- 套餐：旗舰版    折扣：0.85
-- 总价：¥408,000（标价 ¥480,000）
+- 套餐：旗舰版
+- 总价：¥408,000
 
 ## 下载文件
 
@@ -111,7 +111,7 @@ Core fields:
 |---|---|---|---|
 | `客户品牌名称` | string | ✅ | Customer brand name |
 | `餐饮类型` | string | ✅ | `"轻餐"` or `"正餐"` |
-| `门店数量` | integer | ✅ | 1 – 30 |
+| `门店数量` | integer | ✅ | 1 – 300; 31–300 auto-routes to anchor + tiered comparison (see service README) |
 | `门店套餐` | string | ✅ | e.g. `"旗舰版"` |
 | `门店增值模块` | string[] | ❌ | |
 | `总部模块` | string[] | ❌ | |
