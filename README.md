@@ -6,7 +6,7 @@
 
 一个用于 OpenClaw 的技能包：接收一份报价表单 JSON，调用后端 [quanlaidian-quote-service](https://github.com/jasonshao/quanlaidian-quote-service)，回写报价预览和 PDF / Excel / JSON 配置文件的下载链接。
 
-**版本：** 1.1.1　**依赖：** 仅 Python 3 标准库
+**版本：** 1.2.0　**依赖：** 仅 Python 3 标准库
 
 ---
 
