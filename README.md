@@ -50,7 +50,7 @@ bash scripts/install_cron.sh
 | 变量 | 必填 | 说明 |
 |---|---|---|
 | `QUOTE_API_TOKEN` | ✅ | API 认证令牌（向管理员申请，每个组织一个） |
-| `QUOTE_API_URL` | ❌ | 报价服务地址，默认 `https://api.quanlaidian.com/v1/quote` |
+| `QUOTE_API_URL` | ❌ | 报价服务地址，默认 `https://<your-api-host>/v1/quote`；生产环境 `https://<your-api-host>/v1/quote`（请向管理员获取实际地址） |
 
 ---
 
