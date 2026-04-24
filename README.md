@@ -117,7 +117,6 @@ _报价版本：small-segment-v2.3_
 | `实施服务类型` | string | ❌ | |
 | `实施服务人天` | integer | ❌ | ≥ 0 |
 
-完整的 API 请求/响应结构见 [quanlaidian-quote-service README](https://github.com/jasonshao/quanlaidian-quote-service)。
 
 ---
 
